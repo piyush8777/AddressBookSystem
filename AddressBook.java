@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class AddressBook {
 	 Scanner sc = new Scanner(System.in);
 	    List<Contacts> personDetails = new ArrayList<Contacts>();
-	    Contacts person = new Contacts();
 
 	    // @add method is used to add contacts entered from the User:
 	    public void add() {
