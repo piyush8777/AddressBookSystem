@@ -3,97 +3,107 @@ package com.bridgelabz;
 import java.util.Scanner;
 
 public class Contacts {
-	String firstName;
-    String lastName;
-    String address;
-    String city;
-    String email;
-    int zip;
-    Long phoneNumber;
+	 String firstName;
+	    String lastName;
+	    String address;
+	    String city;
+	    String email;
+	    String state;
+	    int zip;
+	    Long phoneNumber;
 
-    Scanner sc = new Scanner(System.in);
+	   // Scanner sc = new Scanner(System.in);
+	    
+	    public String getFirstName() {
+	        return firstName;
+	    }
 
-    public Contacts() {
+	    public void setFirstName(String firstName) {
+	        this.firstName = firstName;
+	    }
 
-    }
+	    public String getLastName() {
+	        return lastName;
+	    }
 
-    @Override
-    public String toString() {
-        return "Contacts{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", email='" + email + '\'' +
-                ", zip=" + zip +
-                ", phoneNumber=" + phoneNumber +
-                '}';
-    }
-    public String getFirstName() {
-        return firstName;
-    }
+	    public void setLastName(String lastName) {
+	        this.lastName = lastName;
+	    }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	    public String getAddress() {
+	        return address;
+	    }
 
-    public String getLastName() {
-        return lastName;
-    }
+	    public void setAddress(String address) {
+	        this.address = address;
+	    }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	    public String getCity() {
+	        return city;
+	    }
 
-    public String getAddress() {
-        return address;
-    }
+	    public void setCity(String city) {
+	        this.city = city;
+	    }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+	    public String getEmail() {
+	        return email;
+	    }
 
-    public String getCity() {
-        return city;
-    }
+	    public void setEmail(String email) {
+	        this.email = email;
+	    }
 
-    public void setCity(String city) {
-        this.city = city;
-    }
+	    public int getZip() {
+	        return zip;
+	    }
 
-    public String getEmail() {
-        return email;
-    }
+	    public void setZip(int zip) {
+	        this.zip = zip;
+	    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	    public Long getPhoneNumber() {
+	        return phoneNumber;
+	    }
 
-    public int getZip() {
-        return zip;
-    }
+	    public void setPhoneNumber(Long phoneNumber) {
+	        this.phoneNumber = phoneNumber;
+	    }
 
-    public void setZip(int zip) {
-        this.zip = zip;
-    }
+	    public String getState() {
+	        return state;
+	    }
 
-    public Long getPhoneNumber() {
-        return phoneNumber;
-    }
+	    public void setState(String state) {
+	        this.state = state;
+	    }
 
-    public void setPhoneNumber(Long phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 
-    public Contacts(String firstName, String lastName, String address, String city, String email, int zip, Long phoneNumber) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.address = address;
-        this.city = city;
-        this.email = email;
-        this.zip = zip;
-        this.phoneNumber = phoneNumber;
-    }
+	    public Contacts(String firstName, String lastName, String address, String city, String email,String state, int zip, Long phoneNumber) {
+	        this.firstName = firstName;
+	        this.lastName = lastName;
+	        this.address = address;
+	        this.city = city;
+	        this.email = email;
+	        this.zip = zip;
+	        this.phoneNumber = phoneNumber;
+	        this.state = state;
+	    }
+
+
+	    @Override
+	    public String toString() {
+	        return "Contacts{" +
+	                "firstName='" + firstName + '\'' +
+	                ", lastName='" + lastName + '\'' +
+	                ", address='" + address + '\'' +
+	                ", city='" + city + '\'' +
+	                ", email='" + email + '\'' +
+	                ", state='" + state + '\'' +
+	                ", zip=" + zip +
+	                ", phoneNumber=" + phoneNumber +
+	                '}';
+	    }
 
 }
 
