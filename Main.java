@@ -14,8 +14,8 @@ public class Main {
                 System.out.println("[2] :View all the contacts from AddressBook");
                 System.out.println("[3] :Search Contact from a city");
                 System.out.println("[4] :Search Contact from a State");
-
-                System.out.println("[5] :Exit");
+                System.out.println("[5] :Search City of which u want the count of contacts");
+                System.out.println("[6] :Exit");
                 System.out.println("Enter choice: ");
                 int option = sc.nextInt();
                 switch (option) {
@@ -61,8 +61,13 @@ public class Main {
                         String state = sc.next();
                         addressBook1.getPersonNameByState(state);
                         break;
-
                     case 5:
+                        System.out.println("enter city of which u want count");
+                        String city = sc.next();
+                        addressBook1.CountByCity(city);
+                        break;
+
+                    case 6:
                         flag = false;
                         break;
                 }

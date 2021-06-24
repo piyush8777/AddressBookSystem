@@ -9,8 +9,6 @@ import java.util.Scanner;
 public class AddressBookManager {
 	Map<String, LinkedList> addressbook = new HashMap<String, LinkedList>();
     Scanner scanner = new Scanner(System.in);
-
-
     public void createAddressBook() {
         System.out.println("Enter the name of a AddressBook: ");
         String addressBookName = scanner.next();
