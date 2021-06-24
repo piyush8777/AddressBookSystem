@@ -4,12 +4,9 @@ import java.util.Scanner;
 
 public class Main {
 	static Scanner sc =new Scanner(System.in);
-
-
-    public static void main(String[] args) {
+	public static void main(String[] args) {
         System.out.println("WELCOME TO ADDRESS BOOK SYSTEM.");
         AddressBook addressBook1 = new AddressBook();
-        AddressBookManager addressBookManager = new AddressBookManager();
         boolean flag = true;
         while (flag) {
                 System.out.println("----------------LIST OF OPERATIONS------------");
@@ -17,6 +14,7 @@ public class Main {
                 System.out.println("[2] :View all the contacts from AddressBook");
                 System.out.println("[3] :Search Contact from a city");
                 System.out.println("[4] :Search Contact from a State");
+
                 System.out.println("[5] :Exit");
                 System.out.println("Enter choice: ");
                 int option = sc.nextInt();
