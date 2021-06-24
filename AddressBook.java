@@ -104,5 +104,23 @@ public class AddressBook {
 	            }
 
 	        }
+
+	        // Choice 3 gives option for Deleting a contact...
+	        if (choice == 3) {
+	            System.out.println("Deleting a contact");
+	            //System.out.println(personDetails);
+	            System.out.println("Enter name of contact you want to delete ");
+	            Scanner input = new Scanner(System.in);
+	            String deleteContact = input.next();
+
+	            for (Contacts i : personDetails) {
+
+	                if (i.getFirstName().equals(deleteContact)) {
+	                    personDetails.remove(i);
+	                    System.out.println("contacts left are :" + personDetails.size());
+	                    System.out.println(personDetails);
+	                }
+	            }
+	        }
 	    }
 }
