@@ -1,11 +1,11 @@
 /**
  * ************************** 
- * Purpose: Address Book - to sort the entries in the address book 
- *                         alphabetically by Person’s name
- *
+ * Purpose: Address Book - Ability to sort the entries in the address book 
+ *                      by city , state or zip 
+ *                      
  * @author Piyush Shaw
  * @version 1.0
- * @since 23-06-2021
+ * @since 24-06-2021
  * **************************
  */
 
