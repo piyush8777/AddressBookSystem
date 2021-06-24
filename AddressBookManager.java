@@ -2,6 +2,7 @@ package com.bridgelabz;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -20,24 +21,31 @@ public class AddressBookManager {
         System.out.println(addressbook.keySet());
     }
 
+    //@addContact verifies the addressBookName entered by the user. if not matches it will show exception.
+    public boolean addContact(String addressBookName, ContactPerson obj) {
+        if (addressbook.containsKey(addressBookName) == false) {
+            throw new RuntimeException("AddressBook not present");
+        }
+        System.out.println(obj + "AddressBook name: " + addressBookName);
+        addressbook.get(addressBookName).add(obj);
+        return true;
+    }
+    //@editContact verifies the addressBookName entered by the user. if not matches it will show exception.
 
-	public void editContact(String addressBookName, ContactPerson i) {
-		// TODO Auto-generated method stub
-		
-	}
+    public boolean editContact(String addressBookName, ContactPerson obj) {
+        if (addressbook.containsKey(addressBookName) == false) {
+            throw new RuntimeException("AddressBook not present");
+        }
+        System.out.println(obj + "AddressBook name: " + addressBookName);
+        addressbook.get(addressBookName).add(obj);
+        return true;
+    }
 
+    public List getContactByAddressBook(String addressBookName) {
+        List contacts = addressbook.get(addressBookName);
+        contacts.forEach(contact -> System.out.println(contact));
+        return contacts;
+    }
 
-	public void addContact(String addressBookName, ContactPerson person) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	public void getContactByAddressBook(String addressBookName) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-	}
+}
 

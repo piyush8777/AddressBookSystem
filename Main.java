@@ -3,7 +3,9 @@ package com.bridgelabz;
 import java.util.Scanner;
 
 public class Main {
-    static Scanner sc =new Scanner(System.in);
+	static Scanner sc =new Scanner(System.in);
+
+
     public static void main(String[] args) {
         System.out.println("WELCOME TO ADDRESS BOOK SYSTEM.");
         AddressBook addressBook1 = new AddressBook();
@@ -22,7 +24,6 @@ public class Main {
                     case 1:
                             addressBook1.createAddBook();
                             addressBook1.add();
-                           // addressBook1.getContacts();
                         boolean flag1 = true;
                         while (flag1) {
                         System.out.println("[1]: add a contact");

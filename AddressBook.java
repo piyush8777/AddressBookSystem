@@ -1,7 +1,7 @@
 /**
  * ************************** 
- * Purpose: Address Book - Duplicate Check is done on Person Name while adding
- *                        person to Address Book.
+ * Purpose: Address Book - search Person in a City or State across 
+ *                         the multiple AddressBook
  *
  * @author Piyush Shaw
  * @version 1.0
@@ -23,16 +23,18 @@ public class AddressBook {
     List<ContactPerson> list = new ArrayList();
     AddressBookManager addressBookManager = new AddressBookManager();
 
+ //@createAddBook --> it creates a addressbook with a user input name
     public void createAddBook() {
         addressBookManager.createAddressBook();
     }
-
+//this Method is used to get the contacts from the user entered AddressBook..
     public void getContacts() {
         System.out.println("From which addressbook you want to find details?? ");
         String addressBookName = scanner.next();
         addressBookManager.getContactByAddressBook(addressBookName);
     }
 
+    // To add the contacts in addressBook and returns the list of contacts
     public List<ContactPerson> add() {
         System.out.println("Add new Contact to ADDRESS BOOK:--");
         System.out.println("Available address books are: "+ addressBookManager.addressbook.keySet());
@@ -84,6 +86,7 @@ public class AddressBook {
             return list;
 
     }
+    // @edit is used to edit the contact details of the user
 
     public List<ContactPerson> edit() {
             System.out.println("Enter the AddressBook Name to which you want to edit contacts: ");
@@ -141,7 +144,7 @@ public class AddressBook {
                 }
                         return list;
             }
-
+// @deleteContact is used to delete the contact in a adddressbook
     public boolean deleteContact(String name) {
         int flag = 0;
         for (ContactPerson contact : list) {
@@ -154,7 +157,7 @@ public class AddressBook {
         }
         return flag == 1;
     }
-
+// @CheckDuplicat  restricts the user to enter the same first name again in a particular address book .
     public boolean checkDuplicate(String fname) {
         int flag = 0;
         for (ContactPerson p : list) {
@@ -165,6 +168,7 @@ public class AddressBook {
         }
         return flag == 1;
     }
+    // used to filter firstname and lastname of the contact belonging to same state .
     public void getPersonNameByState(String State) {
         List<ContactPerson> details = list.stream().filter(contactName -> contactName.getState().equals(State))
                 .collect(Collectors.toList());
@@ -177,6 +181,7 @@ public class AddressBook {
             System.out.println("Last Name: " + contact.getLastName());
         }
     }
+    // used to filter firstname and lastname of the contact belonging to same city .
     public void getPersonNameByCity(String cityName) {
         List<ContactPerson> details2 = list.stream().filter(contactName -> contactName.getCity().equals(cityName))
                 .collect(Collectors.toList());
