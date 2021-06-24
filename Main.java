@@ -15,7 +15,8 @@ public class Main {
                 System.out.println("[3] :Search Contact from a city");
                 System.out.println("[4] :Search Contact from a State");
                 System.out.println("[5] :Search City of which u want the count of contacts");
-                System.out.println("[6] :Exit");
+                System.out.println("[6] :Sort by Name" );
+                System.out.println("[7] :Exit");
                 System.out.println("Enter choice: ");
                 int option = sc.nextInt();
                 switch (option) {
@@ -66,8 +67,12 @@ public class Main {
                         String city = sc.next();
                         addressBook1.CountByCity(city);
                         break;
-
                     case 6:
+                        addressBook1.sortByName();
+                        break;
+
+
+                    case 7:
                         flag = false;
                         break;
                 }
