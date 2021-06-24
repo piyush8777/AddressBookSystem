@@ -6,6 +6,6 @@ public class AddressBookMain {
         System.out.println("WELCOME TO ADDRESS BOOK SYSTEM");
         AddressBook addressBook = new AddressBook();
         addressBook.add();
-       // addressBook.choice();
+        addressBook.choice();
     }
 }

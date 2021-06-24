@@ -41,4 +41,68 @@ public class AddressBook {
 	            System.out.println(personDetails);
 	        }
 	    }
+
+	    // @choice it gives choice between add a contact, edit a contact, Delete a contact|
+	    public void choice() {
+	        System.out.println("Enter your Choice :" + "\n" + "[1] Add a contact" + "\n" + "[2] Edit a contact" + "\n" + "[3] Delete a contact");
+	        int choice = sc.nextInt();
+	        if (choice == 1) {
+	            AddressBook addressBook = new AddressBook();
+	            addressBook.add();
+	        }
+	        // Choice 2: it is for Editing a contact
+	        // Switch case is used for giving option to edit the different field
+
+	        if (choice == 2) {
+	            System.out.println("Editing a contact");
+	            System.out.println("Enter the name of contact you want to edit: ");
+	            Scanner input = new Scanner(System.in);
+	            String editContact = input.next();
+	            for (Contacts i : personDetails) {
+	                if (i.getFirstName().equals(editContact)) {
+	                    System.out.println("which field you want to edit :" + "\n" + "[1] : Edit firstName" + "\n" + "[2] : Edit LastName" + "\n" + "[3]: Edit Address" + "\n" + "[4] : Edit City " + "\n" + "[5]: Enter zipCode" + "\n" + "[6]: Enter MobileNo" + "\n" + "[7]: Enter EmailId");
+	                    switch (input.nextInt()) {
+	                        case 1:
+	                            System.out.println("Change the First Name: ");
+	                            String editfName = input.next();
+	                            i.firstName = editfName;
+	                            break;
+	                        case 2:
+	                            System.out.println("Change the Last Name: ");
+	                            String editlName = input.next();
+	                            i.lastName = editlName;
+	                            break;
+	                        case 3:
+	                            System.out.println("Change the Address: ");
+	                            String editAddress = input.next();
+	                            i.address = editAddress;
+	                            break;
+	                        case 4:
+	                            System.out.println("Change the City: ");
+	                            String editCity = input.next();
+	                            i.city = editCity;
+	                            break;
+	                        case 5:
+	                            System.out.println("Change the zip Code: ");
+	                            int editZipCode = input.nextInt();
+	                            i.zip = editZipCode;
+	                            break;
+	                        case 6:
+	                            System.out.println("Change the Phone Number: ");
+	                            Long editPhoneNum = input.nextLong();
+	                            i.phoneNumber = editPhoneNum;
+	                            break;
+	                        case 7:
+	                            System.out.println("Change the Email ID: ");
+	                            String editEmail = input.next();
+	                            i.email = editEmail;
+	                            break;
+	                    }
+
+	                    System.out.println(personDetails);
+	                }
+	            }
+
+	        }
+	    }
 }
